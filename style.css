@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+html,
+body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  background-image: url("https://www.transparenttextures.com/patterns/gradient-squares.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 1rem;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.blur-bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  transition: 0.1s ease;
+}
+
+.result {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  background-color: beige;
+  position: fixed;
+  z-index: 10;
+  width: 80%;
+  max-width: 720px;
+  opacity: 0;
+  padding: 10px 10px;
+  border-radius: 20px;
+}
+
+.show .result {
+  opacity: 1;
+  display: flex;
+}
+
+.show .blur-bg-overlay {
+  opacity: 1;
+}
+
+.result h1 {
+  word-wrap: break-word;
+}
+.result img {
+  width: 100px;
+  height: 80px;
+}
+
+.result-type {
+  font-weight: 800;
+  font-size: larger;
+}
+
+.input-on{
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+}
