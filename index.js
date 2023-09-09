@@ -14,13 +14,15 @@ checkResultBtn.addEventListener("click",(e)=>{
     if (person1NameValue !== "" && person2NameValue !== "" ) {
         let name1 = person1NameValue;
         let name2 = person2NameValue;
+        let loopingName=person1NameValue.toLowerCase().replace(/\s/g, '');
         name1=name1.toLowerCase().replace(/\s/g, '');
         name2=name2.toLowerCase().replace(/\s/g, '');
-        console.log(name1,name2);
-        for (let i = 0; i < name1.length; i++) {
-            if (name2.includes(name1[i])) {
-                name2 = name2.replace(name1[i], "");
-                name1 = name1.replace(name1[i], "");
+        for (let i = 0; i < loopingName.length; i++) {
+            console.log(i);
+            console.log(loopingName[i]);
+            if (name2.includes(loopingName[i])) {
+                name2 = name2.replace(loopingName[i], "");
+                name1 = name1.replace(loopingName[i], "");
             }
         }
 
