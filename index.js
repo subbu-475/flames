@@ -3,10 +3,11 @@ const checkResultBtn=document.querySelector(".check-btn");
 let resultType=document.querySelector(".result-type");
 let resultContent=document.querySelector(".result-content");
 let imageSrc=document.getElementById("shown-img");
+let videoContent=document.querySelector("#video-s");
+let videoURL="./videos/"
 const defaultPath="./Images/contents/";
 let person1Name=document.getElementById("Person1name");
 let person2Name=document.getElementById("Person2name");
-
 
 checkResultBtn.addEventListener("click",(e)=>{
     let person1NameValue=person1Name.value;
@@ -49,31 +50,38 @@ checkResultBtn.addEventListener("click",(e)=>{
                 resultType.textContent="Friends";
                 resultContent.textContent="Friendship is the only cement that will ever hold the world together."
                 imageSrc.setAttribute("src",`${defaultPath}friends.png`);
+                videoContent.setAttribute("src",`${videoURL}friends.mp4`);
                 break;
             case ("l"):
                 resultType.textContent="Love";
                 resultContent.textContent="Love is an endless act of forgiveness. Forgiveness is the key to action and freedom."
                 imageSrc.setAttribute("src",`${defaultPath}love.png`);
+                videoContent.setAttribute("src",`${videoURL}love.mp4`);
                 break;
             case ("a"):
                 resultType.textContent="Affection";
                 resultContent.textContent="Affection is responsible for nine-tenths of whatever solid and durable happiness there is in our lives."
                 imageSrc.setAttribute("src",`${defaultPath}affection.png`);
+                videoContent.setAttribute("src",`${videoURL}affection.mp4`);
                 break;
             case ("m"):
                 resultType.textContent="Marriage";
                 resultContent.textContent="A successful marriage requires falling in love many times, always with the same person."
                 imageSrc.setAttribute("src",`${defaultPath}marriage.png`);
+                videoContent.setAttribute("src",`${videoURL}marriage.mp4`);
+
                 break;
             case ("e"):
                 resultType.textContent="Enemy";
                 resultContent.textContent="You have enemies? Good. That means you've stood up for something, sometime in your life."
                 imageSrc.setAttribute("src",`${defaultPath}enemy.png`);
+                videoContent.setAttribute("src",`${videoURL}enemy.mp4`);
                 break;
             case ("s"):
                 resultType.textContent="Siblings";
                 resultContent.textContent="Siblings are the people we practice on, the people who teach us about fairness and cooperation and kindness and caring, quite often the hard way."
                 imageSrc.setAttribute("src",`${defaultPath}siblings.png`);
+                videoContent.setAttribute("src",`${videoURL}siblings.mp4`);
                 break;
             default:
                 alert("Please check with Developer");
